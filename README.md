@@ -1,5 +1,5 @@
 
-![Logo](./assests/images/High Resolution Logo.svg)
+![Logo](/assests/images/Logo.svg)
 
 
 # Envpage
