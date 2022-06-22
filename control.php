@@ -38,6 +38,7 @@
 
     // Sort in ascending order - this is default
     $folders = scandir($dir);
+    $components_json = new stdClass(); //! define Object before declare values to it
 
     // ! loop over the (./)(root) folder
     foreach ($folders as $folder) {
@@ -53,6 +54,9 @@
                     $count++;
 
                     $path = $folder . "/". $file;
+
+                    //! we need to declare ($folder) as object
+                    $components_json->$folder = new stdClass(); 
 
                     // ? make the Json object and incject it with data
                     $components_json->$folder->path = $path;
