@@ -1,0 +1,7 @@
+@use "../Variables/Variables" as *;
+
+.Header {
+	background: {
+		color: $bg_color;
+	};
+}
