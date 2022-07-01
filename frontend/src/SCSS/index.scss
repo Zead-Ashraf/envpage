@@ -7,3 +7,23 @@
 @use "Layout/Header";
 
 //End Importing Files
+
+* {
+	box-sizing: border-box;
+	font: {
+		family: sans-serif;
+		size: 16px;
+	};
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}

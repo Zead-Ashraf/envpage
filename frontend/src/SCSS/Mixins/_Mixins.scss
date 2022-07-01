@@ -1,0 +1,3 @@
+@mixin addBGTrnsition($duration) {
+	transition: background #{$duration + 0s} ease;
+}

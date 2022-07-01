@@ -1,1 +1,11 @@
-$bg_color: yellow;
+:root {
+	--bg_color: #1d2239;
+	--green_color: #23a96e; //this var wont be changed
+	--font-color: #ddd;
+	--font-color-hover: #fff;
+	--card-bg_color: #292e48;
+}
+
+//this is the main background transition duration
+
+$BGTransition: 1;

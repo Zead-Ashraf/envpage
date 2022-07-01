@@ -1,5 +1,12 @@
+@use "../Variables/Variables" as *;
+
+//import custome Mixins (related to this project only not a libirary)
+@use "../Mixins/Mixins" as *;
+
+
 .Body {
 	background: {
-		color: red;
+		color: var(--bg_color);
 	};
+	@include addBGTrnsition($BGTransition);
 }
