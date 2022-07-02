@@ -1,7 +1,10 @@
  <?php
+    $AccessOrigin = 'Access-Control-Allow-Origin: http://localhost:3000';
+
+    header($AccessOrigin);
 
     function addSources() {
-        $dir = __Dir__;
+        $dir = "../../" . __Dir__;
         $folders = scandir($dir);
         foreach ($folders as $folder) {
             if (is_dir($folder) && $folder != "." && $folder != ".."){
@@ -33,7 +36,7 @@
 
     // * ********************************** make the pages links ************************************
 
-    $dir = __Dir__; // ! the root path
+    $dir ="/opt/lampp/htdocs/envpage/"; // ! the root path
     $count = 0;
 
     // Sort in ascending order - this is default
@@ -42,10 +45,11 @@
 
     // ! loop over the (./)(root) folder
     foreach ($folders as $folder) {
+
         // ! just take the real folders (projects folders only)
-        if (is_dir($folder) && $folder != "." && $folder != ".." && $folder != "assests"){
+        if (is_dir($dir . $folder) && $folder != "." && $folder != ".." && $folder != "assests"){
             // ! scan every folder to extract files in it.
-            $files = scandir($folder);
+            $files = scandir($dir . $folder);
             foreach ($files as $file) {
                 $link = explode(".", $file);
                 // ! take the index file rather than others (to link to it forward)
@@ -83,7 +87,7 @@
             if ($json_a["count"] > $count) {
                 $json_file ="links.json";  // ! JSON files List
                 $json_path = "./assests/JSON/";  // ! JSON files Path
-                $dir = __Dir__;
+                $dir = "../../" . __Dir__;
                 $folders = scandir($dir);
                 $screenShots_path = "./assests/screenshot/";
                 $screenShots= scandir($screenShots_path);

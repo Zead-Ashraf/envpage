@@ -12,7 +12,6 @@ function App() {
 		<main>
 			<Header />
 			<Body />
-			<Card />
 			<Footer />
 		</main>
 	)
