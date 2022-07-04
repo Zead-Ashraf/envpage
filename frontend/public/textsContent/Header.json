@@ -1,0 +1,11 @@
+{
+  "brand": "envpage",
+  "favoriteSports": [
+    "Home",
+    "PHPinfo",
+    "phpMyAdmin",
+    "GitHub"
+  ],
+  "toggleIcon": "./images/sun.svg",
+  "toggleBtn": "Light Mood"
+}
