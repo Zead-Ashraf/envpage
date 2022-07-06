@@ -10,6 +10,7 @@ function Card(props) {
 			<br />
 			<strong>{props.project.img_path}</strong>
 			<hr />
+			<img src={require("../screenshot/" + props.project.img_path)} />
 			</section>
 	)
 }
