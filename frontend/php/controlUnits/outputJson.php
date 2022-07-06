@@ -28,6 +28,7 @@
                     $components_json->$folder = new stdClass(); 
 
                     // ? make the Json object and incject it with data
+                    $components_json->$folder->name = $folder;
                     $components_json->$folder->path = $path;
                     $components_json->$folder->img_path = $folder . ".jpeg";
 
