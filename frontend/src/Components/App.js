@@ -9,7 +9,6 @@ import axios from "axios";
 // import components
 import Header from "./_Header"
 import Body from "./_Body" 
-import Card from "./_Card" 
 import Footer from "./_Footer"
 
 
@@ -24,10 +23,19 @@ function App() {
 	}, []);
 	// * end: fetch HeaderData
 
+	// * start: fetch CardData
+	const [CardData, setCardData] = React.useState(null);
+
+  	React.useEffect(() => {
+  		axios.get('http://localhost:8000/control.php')
+  		.then(res => setCardData(res.data));
+	}, []);
+	// * end: fetch CardData
+
 	return (
 		<main>
 			<Header content={HeaderData} />
-			<Body />
+			<Body content={CardData}/>
 			<Footer />
 		</main>
 	)
