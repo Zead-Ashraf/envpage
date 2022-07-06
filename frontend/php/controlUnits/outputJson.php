@@ -30,12 +30,15 @@
                     // ? make the Json object and incject it with data
                     $components_json->$folder->path = $path;
                     $components_json->$folder->img_path = $folder . ".jpeg";
+
+                    // ? we make it in an a form of array to have abillity of (map) on it in JS
+                    $JsonArray[] = $components_json->$folder;
                 }
             }
         }
     }
 
     // ? encode the JSON object in order to send it
-    $encoded_components = json_encode($components_json);
+    $encoded_components = json_encode($JsonArray);
 
     echo $encoded_components;

@@ -5,16 +5,14 @@ import React from 'react';
 
 import axios from "axios";
 
-function Card() {
-	axios.get('http://localhost:8000/control.php')
-  .then(res => {
-    console.log(res.data);
-  });
-
+function Card(props) {
 	return (
 		<section className="Card">
-			<strong>Card</strong>
-		</section>
+			<strong>{props.project.path}</strong>
+			<br />
+			<strong>{props.project.img_path}</strong>
+			<hr />
+			</section>
 	)
 }
 

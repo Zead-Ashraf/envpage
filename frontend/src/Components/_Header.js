@@ -22,8 +22,8 @@ function Header(props) {
 					{
 						props.content ? 
 							props.content.favoriteSports.map(
-								function(elem) {
-									return <a href="#"><li className="navbar--item">{elem}</li></a>
+								function(elem,ind) {
+									return <a href="#" key={ind}><li className="navbar--item">{elem}</li></a>
 								}
 						) 
 						: props.content
